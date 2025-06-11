@@ -1,0 +1,67 @@
+[
+    {
+        "id": 1,
+        "nome": "Camiseta Básica",
+        "preco": 29.90,
+        "imagem": "img/produto1.jpg",
+        "descricao": "Camiseta 100% algodão, diversas cores.",
+        "categoria": "roupas"
+    },
+    {
+        "id": 2,
+        "nome": "Boné Esportivo",
+        "preco": 49.90,
+        "imagem": "img/produto2.jpg",
+        "descricao": "Boné esportivo com ajuste, várias cores.",
+        "categoria": "acessorios"
+    },
+    {
+        "id": 3,
+        "nome": "Calça Jeans",
+        "preco": 89.90,
+        "imagem": "img/produto3.jpg",
+        "descricao": "Calça jeans slim fit, diversos tamanhos.",
+        "categoria": "roupas"
+    },
+    {
+        "id": 4,
+        "nome": "Relógio Esportivo",
+        "preco": 299.90,
+        "imagem":"img/produto4_1.jpg",
+        "descricao": "relógio resistente, para a préticade esportes.",
+        "categoria": "acessorios"
+    },
+    {
+        "id": 5,
+        "nome": "Camiseta Básica",
+        "preco": 29.90,
+        "imagem": "img/produto1.jpg",
+        "descricao": "Camiseta 100% algodão, diversas cores.",
+        "categoria": "roupas"
+    },
+    {
+        "id": 6,
+        "nome": "Boné Esportivo",
+        "preco": 49.90,
+        "imagem": "img/produto2.jpg",
+        "descricao": "Boné esportivo com ajuste, várias cores.",
+        "categoria": "acessorios"
+    },
+    {
+        "id": 7,
+        "nome": "Calça Jeans",
+        "preco": 89.90,
+        "imagem": "img/produto3.jpg",
+        "descricao": "Calça jeans slim fit, diversos tamanhos.",
+        "categoria": "roupas"
+    },
+    {
+        "id": 8,
+        "nome": "Relógio Esportivo",
+        "preco": 299.90,
+        "imagem": "img/produto4_1.jpg",
+        "descricao": "relógio resistente, para a préticade esportes.",
+        "categoria": "acessorios"
+    }
+    
+]

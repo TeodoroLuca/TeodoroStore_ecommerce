@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loja Online Moderna</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="principal.html">
+                <img src="img/logo.png" alt="Carrinho" class="carrinho-icone" width="80">
+            </a>
+            <style>
+                .carrinho-icone {
+                    border-radius: 50%;
+                }
+            </style>
+            <nav>
+                <a href="principal.html">Início</a>
+                <a href="index.html">Produtos</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+            <div id="carrinho-resumo">
+                <img id="carrinho-resumo" src="img/carrinho2.png" alt="" style="width: 30px; vertical-align: middle;">
+                Carrinho:&emsp;<span id="carrinho-quantidade"> &emsp;0 </span>-itens: R$ <span id="carrinho-total">0.00</span>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div id="filtros">
+            <select id="categoria">
+                <option value="">Todas as Categorias</option>
+                <option value="roupas">Roupas</option>
+                <option value="acessorios">Acessórios</option>
+            </select>
+            <input type="number" id="preco-max" placeholder="Preço Máximo">
+            <button id="filtrar">Filtrar</button>
+        </div>
+        <div id="produtos"></div>
+        <div id="carrinho" class="oculto">
+            <ul id="carrinho-itens"></ul>
+            <p>Total: R$ <span id="carrinho-total-completo">0.00</span></p>
+            <button id="fechar-carrinho">&times;</button>  <h2>Carrinho de Compras</h2>
+            <button id="finalizar-compra">Finalizar Compra</button>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Teodoro Store. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

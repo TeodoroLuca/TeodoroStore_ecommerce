@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loja Online Moderna - Página Inicial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="principal.html">
+                <img src="img/logo.png" alt="Carrinho" class="carrinho-icone" width="80">
+            </a>
+                <style>
+                    .carrinho-icone {
+                        border-radius: 50%;
+                    }
+                </style>
+            <nav>
+                <a href="principal.html">Início</a>
+                <a href="index.html">Produtos</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+            <div id="carrinho-resumo">
+                <img src="img/carrinho2.png" alt="" style="width: 25px; vertical-align: middle;">
+                Carrinho:&emsp;<span id="carrinho-quantidade"> &emsp;0 </span>-itens: R$ <span id="carrinho-total">0.00</span>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <h2>Bem-vindo à Teodoro Store!</h2>
+            <p>Teodoro Store: Sua loja completa de roupas e acessórios!
+
+            Na Teodoro Store, você encontra tudo o que precisa para expressar seu estilo com autenticidade e bom gosto. Trabalhamos com moda masculina, feminina e acessórios que combinam qualidade, conforto e as últimas tendências do mercado.
+
+            Nossa Missão:
+
+            - Oferecer roupas e acessórios de alta qualidade das melhores marcas.
+            - Proporcionar uma experiência de compra online fácil, rápida e segura.
+            - Atender com excelência, oferecendo opções para todos os estilos e ocasiões.
+            - Trazer novidades constantes para manter seu guarda-roupa sempre atualizado.
+
+            O Que Você Encontrará na Teodoro Store:
+
+            - **Roupas**: Camisetas, camisas, calças, vestidos, shorts, saias e muito mais para o seu dia a dia ou ocasiões especiais.
+            - **Acessórios**: Bolsas, bonés, cintos, óculos, bijuterias e itens que completam seu visual com personalidade.
+            - **Moda para Todos**: Peças pensadas para diferentes estilos, tamanhos e preferências, com foco na diversidade e inclusão.
+
+            Por Que Escolher a Teodoro Store:
+
+            - **Qualidade Garantida**: Trabalhamos com produtos selecionados que unem estilo e durabilidade.
+            - **Preços Justos**: Oferecemos ótimas condições de pagamento, descontos e promoções exclusivas.
+            - **Entrega Rápida e Segura**: Enviamos para todo o Brasil, com agilidade e segurança.
+            - **Atendimento Humanizado**: Nossa equipe está sempre pronta para ajudar você a encontrar o look ideal.
+
+            Junte-se à Comunidade Teodoro:
+
+            Siga-nos nas redes sociais e acompanhe as novidades da moda, promoções especiais e dicas de estilo. Compartilhe seus looks com a hashtag **#EstiloTeodoro** e faça parte da nossa comunidade de pessoas que amam se vestir bem!
+
+            Teodoro Store: Conectando você à moda com estilo e autenticidade.
+            </p>
+
+            <img src="img/produto1.jpg" style="width: 80; vertical-align: bottom;" >
+            <img src="img/produto2.jpg" style="width: 60; vertical-align: middle" >
+
+        <div id="carrinho" class="oculto">
+            <h2>Carrinho de Compras</h2> 
+            <button id="fechar-carrinho">&times;</button> 
+            <ul id="carrinho-itens"></ul>
+            <p>Total: R$ <span id="carrinho-total-completo">0.00</span></p>               
+            <button id="finalizar-compra">Finalizar Compra</button>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Teodoro Store. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="script2.js"></script>
+</body>
+</html>

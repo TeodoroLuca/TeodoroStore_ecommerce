@@ -1,0 +1,353 @@
+/* Reset básico para garantir consistência entre navegadores */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif; /* Fonte mais moderna e profissional */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Tom mais suave de cinza */
+    color: #2c3e50; /* Cor de texto mais escura para melhor legibilidade */
+    line-height: 1.7; /* Aumenta o espaçamento entre linhas */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    width: 95%; /* Aumenta a largura em telas maiores */
+    max-width: 1400px; /* Limite máximo maior */
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background-color: #2c3e50; /* Cor mais escura e sofisticada */
+    color: white;
+    padding: 25px 0; /* Mais padding */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); /* Sombra mais sutil */
+    transition: transform 0.4s ease, background-color 0.3s ease; /* Adiciona transição para transform */
+    transform: translateY(0); /* Inicialmente visível */
+    position: sticky;  /* Fixa o header no topo */
+    top: 0;          /* Garante que o header fique no topo */
+    z-index: 1020;   /* Z-index alto para ficar acima de outros elementos */
+}
+
+header.hide {
+    transform: translateY(-100%); /* Esconde o header completamente para cima */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo para o logo (se houver) */
+header .logo {
+    font-size: 1.8rem; /* Tamanho de fonte maior para o logo */
+    font-weight: 700;   /* Negrito para o logo */
+    color: #ecf0f1;     /* Cor clara para o logo */
+    text-decoration: none; /* Remove o sublinhado padrão */
+}
+
+header nav a {
+    color: #ecf0f1; /* Cor mais clara para os links */
+    text-decoration: none;
+    margin: 0 18px; /* Espaçamento maior entre os links */
+    transition: color 0.3s ease, border-bottom 0.2s ease; /* Transição suave e adiciona border-bottom */
+    font-weight: 600; /* Deixa os links do menu em negrito */
+    padding-bottom: 5px; /* Espaço para a borda inferior */
+    border-bottom: 2px solid transparent; /* Borda inferior transparente inicialmente */
+}
+
+header nav a:hover {
+    color: #3498db; /* Cor de destaque no hover */
+    border-bottom: 2px solid #3498db; /* Borda inferior aparece no hover */
+}
+
+main {
+    padding: 40px 0; /* Mais padding */
+}
+
+.produto {
+    border: 1px solid #ddd; /* Borda mais sutil */
+    padding: 35px; /* Mais padding */
+    margin: 20px;
+    width: 280px; /* Largura ligeiramente maior */
+    display: inline-block;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); /* Sombra mais profissional */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px; /* Bordas arredondadas */
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse as bordas */
+}
+
+.produto:hover {
+    transform: translateY(-7px); /* Efeito de elevação mais sutil */
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); /* Sombra mais intensa no hover */
+}
+
+.produto img {
+    width: 100%;  /* A imagem ocupa toda a largura do container */
+    max-width: 250px; /* Evita que a imagem fique muito grande*/
+    height: 220px; /* Altura fixa */
+    object-fit: cover; /* Mantém a proporção e corta se necessário */
+    margin-bottom: 20px; /* Mais margem */
+    border-radius: 8px;  /* Bordas arredondadas */
+    transition: transform 0.4s ease, filter 0.3s ease; /*Transição e filtro */
+}
+
+
+.produto img:hover {
+    transform: scale(1.1); /* Zoom suave */
+    filter: brightness(1.1); /* Aumenta o brilho no hover */
+}
+
+.produto h3 { /* Estilo para o título do produto */
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #34495e;
+}
+
+.produto p { /* Estilo para a descrição do produto */
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.produto .preco { /* Estilo para o preço */
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #27ae60;
+    margin-bottom: 20px;
+}
+
+
+.oculto {
+    display: none;
+}
+
+#carrinho {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #e9ecef;
+    padding: 40px; /* Mais padding */
+    width: 90%;      /* Design responsivo */
+    max-width: 700px; /* Largura máxima aumentada */
+    max-height: 90vh; /* Aumenta altura máxima */
+    overflow-y: auto;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); /* Sombra consistente */
+    z-index: 1050; /* Z-index ligeiramente menor que o do header */
+    border-radius: 12px; /* Bordas mais arredondadas */
+}
+
+#carrinho h2 {
+    margin-bottom: 30px; /* Mais margem */
+    color: #333;
+    text-align: center;
+    font-size: 1.8rem; /* Aumenta o tamanho do título */
+}
+
+#carrinho-itens li {
+    padding: 20px 0; /* Mais padding */
+    border-bottom: 1px solid #ecf0f1; /* Cor da borda mais suave */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem; /* Aumenta o tamanho da fonte dos itens */
+}
+
+#carrinho-itens li:last-child {
+    border-bottom: none;
+    background-color: #ffffff;
+}
+
+#carrinho button {
+     background-color: #e74c3c; /* Cor de destaque, mas menos vibrante */
+    color: white;
+    border: none;
+    padding: 10px 18px; /* Padding ajustado */
+    border-radius: 8px; /* Bordas arredondadas */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Adiciona transição de transformação */
+    font-size: 1rem; /* Aumenta tamanho da fonte */
+}
+
+#carrinho button:hover {
+    background-color: #c0392b; /* Cor mais escura no hover */
+     transform: translateY(-2px); /* Leve efeito de elevação */
+}
+
+#finalizar-compra {
+   background-color: #2ecc71; /* Cor mais moderna */
+    color: white;
+    border: none;
+    padding: 15px 30px; /* Mais padding */
+    border-radius: 8px; /* Bordas arredondadas */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Adiciona transição de transformação */
+    display: block;
+    margin: 25px auto 0; /* Mais margem */
+    font-size: 1.1rem; /* Aumenta o tamanho da fonte */
+}
+
+#finalizar-compra:hover {
+    background-color: #27ae60; /* Cor mais escura no hover */
+    transform: translateY(-2px);  /* Leve efeito de elevação */
+}
+
+footer {
+     background-color: #2c3e50; /* Mesma cor do header */
+    color: #ecf0f1; /* Mesma cor do texto do header */
+    text-align: center;
+    padding: 25px 0; /* Mais padding */
+    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.16), 0 -3px 6px rgba(0, 0, 0, 0.23); /* Sombra consistente */
+}
+
+#carrinho-resumo {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo */
+}
+
+#carrinho-resumo img {
+     width: 35px; /* Aumenta tamanho do ícone */
+    vertical-align: middle;
+    margin-right: 12px; /* Mais margem */
+}
+
+/* Estilo padrão do botão "Adicionar ao Carrinho" */
+.adicionar-carrinho {
+    background-color: #3498db; /* Cor mais profissional */
+    color: white;
+    border: none;
+    padding: 12px 22px; /* Padding ajustado */
+    border-radius: 8px; /* Bordas arredondadas */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Adiciona transição de transformação */
+    font-size: 1rem; /* Aumenta o tamanho da fonte */
+}
+
+/* Estilo do botão "Adicionar ao Carrinho" no hover */
+.adicionar-carrinho:hover {
+    background-color: #2980b9; /* Cor mais escura no hover */
+    transform: translateY(-2px); /* Leve efeito de elevação */
+}
+
+
+/* Botão para fechar o carrinho (X) */
+#fechar-carrinho {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #777;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#fechar-carrinho:hover {
+    color: #333;
+}
+
+/* Estilo do contêiner das redes sociais */
+.social-icons {
+    text-align: center;
+    padding: 25px 0; /* Mais padding */
+    background-color: #f8f8f8;
+}
+
+/* Estilo dos links das redes sociais */
+.social-icons a {
+    display: inline-block;
+    margin: 0 18px; /* Mais margem */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Adiciona transição de opacidade */
+    opacity: 0.8; /* Leve transparência inicial */
+}
+
+.social-icons a:hover {
+    transform: scale(1.2); /* Aumenta o tamanho do link no hover, mas menos */
+    opacity: 1; /* Remove a transparência no hover */
+}
+
+/* Estilo das imagens das redes sociais */
+.social-icons img {
+    width: 55px; /* Tamanho ligeiramente maior */
+    height: 55px;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Sombra mais sutil */
+    transition: box-shadow 0.3s ease;
+}
+
+.social-icons img:hover {
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.3); /* Sombra mais intensa no hover */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 50%; /* Aumenta a largura em telas menores */
+    }
+
+    .produto {
+        width: calc(50% - 40px); /* 2 produtos por linha com margens */
+
+    }
+    header nav a {
+        margin: 0 10px; /* Reduz espaçamento no menu */
+        font-size: 0.9rem; /* Reduz tamanho da fonte no menu */
+    }
+
+    #carrinho {
+        padding: 25px;  /* Reduz padding */
+        width: 95%;    /* Aumenta largura em telas menores*/
+    }
+
+    #carrinho h2{
+        font-size: 1.5rem; /* Reduz o tamanho do título do carrinho */
+    }
+
+    #carrinho-itens li {
+        font-size: 1rem; /* Reduz o tamanho da fonte */
+        padding: 15px 0; /* Reduz o padding */
+    }
+    #finalizar-compra{
+        font-size: 1rem; /* Reduz o tamanho do botao de finalizar compra */
+        padding: 12px 20px; /* Reduz o padding do botao de finalizar compra*/
+    }
+    .adicionar-carrinho{
+        padding: 10px 15px;  /* Reduz o padding dos botões */
+        font-size: 0.9rem;   /* Reduz o tamanho da fonte dos botões */
+    }
+}
+
+@media (max-width: 480px) {
+    .produto {
+        width: 100%; /* 1 produto por linha */
+        margin: 10px 0;  /* Ajusta margem */
+    }
+
+    header .container {
+        flex-direction: column; /* Muda o layout do header para vertical */
+        align-items: stretch;  /* Estica os itens */
+    }
+
+    header nav {
+        margin-top: 15px; /* Adiciona espaço entre o logo e o menu */
+        text-align: center; /* Centraliza os links do menu */
+    }
+    header nav a {
+        display: block; /* Coloca cada link em uma nova linha */
+        margin: 8px 0;  /* Ajusta espaçamento */
+        padding: 8px 0; /* Adiciona padding */
+
+    }
+}
